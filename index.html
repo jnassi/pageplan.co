@@ -42,7 +42,7 @@
 <p style="margin-top:40px">You have a date. Book club is Thursday. The library book is due back, and there's a waiting list behind you. The movie comes out next month. And you have a book you're partway through. Page Plan answers one question: how many pages a day do you need to read to finish on time? It gives you one number, and the page to reach tonight.</p>
 
 <div class="callout note">
-<p><strong>A note on who did what.</strong> Page Plan was built with <a href="https://claude.com/claude-code">Claude Code</a>, Anthropic's AI coding tool, and Claude did the heavy lifting. It wrote essentially all of the code: the reading-plan math, the iPhone and iPad app, iCloud sync, book lookup, the daily reminder, and the widgets. It also made the App Store screenshots and drafted this page. My part was the idea, the decisions (who it's for, what "behind" and "ahead" should mean, audiobooks by time and e-books by percent), testing everything on my own iPhone and iPad with the books I'm actually reading, and the stories that are mine to tell. When this page says "I," that's me; most of the building was Claude. <em>Jason Nassi</em></p>
+<p><strong>A note on who did what.</strong> Page Plan was built with <a href="https://claude.com/claude-code">Claude Code</a>, Anthropic's AI coding tool, and Claude did the heavy lifting. It wrote essentially all of the code: the reading-plan math, the iPhone and iPad app, iCloud sync, book lookup, reminders, Daily Pace and reading goals, and the widgets. It also made the App Store screenshots and drafted this page. My part was the idea, the decisions (who it's for, what "behind" and "ahead" should mean, audiobooks by time and e-books by percent), testing everything on my own iPhone and iPad with the books I'm actually reading, and the stories that are mine to tell. When this page says "I," that's me; most of the building was Claude. <em>Jason Nassi</em></p>
 </div>
 
 <p>It started as <em>Reading Pace Planner</em>, then <em>Reading Planner</em>, until the iPhone Home Screen cut that to "ReadingPla…". So it became Page Plan.</p>
@@ -70,12 +70,18 @@
 
 <div class="shots">
   <figure><img src="/assets/img/iphone-1.jpg" alt="To Kill a Mockingbird: 40 pages a day, read to page 86 tonight" loading="lazy" width="644" height="1400"><figcaption>40 pages a day, and the page to reach tonight.</figcaption></figure>
-  <figure><img src="/assets/img/iphone-2.jpg" alt="An audiobook at 1.25×, a little behind" loading="lazy" width="644" height="1400"><figcaption>An audiobook at 1.25×, a little behind.</figcaption></figure>
-  <figure><img src="/assets/img/iphone-5.jpg" alt="Today's Reading widget on the Home Screen" loading="lazy" width="644" height="1400"><figcaption>Today's Reading on the Home Screen.</figcaption></figure>
+  <figure><img src="/assets/img/iphone-6.jpg" alt="War and Peace at 20 pages a day, finishing January 16" loading="lazy" width="644" height="1400"><figcaption>Pick a pace, see your finish line.</figcaption></figure>
+  <figure><img src="/assets/img/iphone-7.jpg" alt="A 2026 reading goal: 23 of 24 books, 2 ahead of pace, ready to share" loading="lazy" width="644" height="1400"><figcaption>A reading goal, ready to share.</figcaption></figure>
 </div>
 
 <h3>One number, and tonight's page</h3>
-<p>Add a book, the page you're on, and the date you need to be done. Page Plan shows pages a day in big type, and a bar for today: where you started, where to stop, and how far you've gotten. Log your page as you go, and the rest of the plan adjusts.</p>
+<p>Add a book, the page you're on, and the date you need to be done. Page Plan shows pages a day in big type, and a bar for today with your target page, which turns green when you reach it. Log your page as you go, and the rest of the plan adjusts.</p>
+
+<h3>Or flip it: Daily Pace</h3>
+<p>No deadline? Pick how much you'll read a day, and Page Plan tells you when you'll finish: <em>20 pages a day, done Saturday, January 16.</em> Read more and the date comes sooner. It's a New Year's resolution with a finish line.</p>
+
+<h3>A reading goal for the year, or the month</h3>
+<p>Set a goal, like 24 books this year or 3 this month, and Page Plan counts the books you finish and tells you whether you're ahead of pace. Then share your progress as an image made for Instagram, as a square post or a Story, with the covers of the books you've finished.</p>
 
 <h3>Behind? Ahead? It tells you</h3>
 <p>Fall more than a day behind your original plan and you get a tortoise and the cost of catching up: <em>94 pages behind your original plan. That's 45 a day now, up from 34.</em> Get ahead and you get a hare instead. Reading past today's target lowers tomorrow's number, and Page Plan only mentions it when it actually changes.</p>
@@ -91,8 +97,8 @@
 <h3>Due today, or overdue</h3>
 <p>The due date itself shows as <em>Due today</em>, not overdue, since the meeting is today. After that, <em>3 days overdue</em>, with <strong>Extend Due Date</strong>: pick a new date on a calendar and see the new pace before you save it.</p>
 
-<h3>A nudge at 7 PM</h3>
-<p>Turn on the daily reminder, pick a time, and you get one notification with what's left to read today, for every book. Already done for the day? It skips you.</p>
+<h3>Reminders, morning and evening</h3>
+<p>Add a reminder at any time of day, or several: a morning one with the whole day's target, an evening one with what's still left. Each lists what's left to read today, for every book. Already done for the day? It skips you.</p>
 
 <h3>Widgets</h3>
 <p><em>Today's Reading</em> for the Home Screen and the Lock Screen: your most urgent book, or up to three, with today's target and a progress bar in each book's own units.</p>
@@ -107,7 +113,7 @@
 <p>No account, no ads, no tracking. Your books stay on your devices and in your own iCloud. On the App Store, Page Plan is labeled <strong>Data Not Collected</strong>. (<a href="/privacy/">Privacy policy</a>)</p>
 
 <h2>How it works (the short version)</h2>
-<p>Page Plan is a native SwiftUI app. Your books live in SwiftData on the device and sync through your private iCloud database. There's no Page Plan server at all. The plan is worked out on the device every time you open a book. Book lookup asks Google Books directly from your phone, falling back to Open Library. The daily reminder is a notification scheduled on the device, and the widgets read the same data the app does.</p>
+<p>Page Plan is a native SwiftUI app. Your books live in SwiftData on the device and sync through your private iCloud database. There's no Page Plan server at all. The plan is worked out on the device every time you open a book. Book lookup asks Google Books directly from your phone, falling back to Open Library. Reminders are notifications scheduled on the device, and the widgets read the same data the app does.</p>
 
 <h2>What you need</h2>
 <ul>
@@ -119,7 +125,7 @@
 <h2>Known limitations</h2>
 <ul>
   <li><strong>One format per book.</strong> If you read the Kindle edition at night and listen to the audiobook in the car, Page Plan can't track both on the same book yet.</li>
-  <li><strong>The reminder can be a step behind.</strong> It's scheduled on each device, so a page you log on your iPad reaches your iPhone's reminder once you open Page Plan on the iPhone.</li>
+  <li><strong>Reminders can be a step behind.</strong> They're scheduled on each device, so a page you log on your iPad reaches your iPhone's reminders once you open Page Plan on the iPhone.</li>
   <li><strong>Page counts vary by edition.</strong> Lookup gives a starting point; your copy is the truth.</li>
   <li><strong>Apple only, and English only.</strong> No Android, no web version.</li>
   <li><strong>It's a personal project.</strong> It's my first iOS app, built for my own book clubs and opened up to anyone. Expect the occasional rough edge, and <a href="/help/">tell me</a> when you find one.</li>
